@@ -55,7 +55,7 @@ At this level an interviewer wants to know whether the interviewee is a coachabl
 
 
 ### Familiarity of Basic Terminology
-1. What are the differences between AngularJS (angular 1.x) and Angular (Angular 2.x and beyond)?  
+1. **What are the differences between AngularJS (angular 1.x) and Angular (Angular 2.x and beyond)?**  
 **Ans:** Angular 2 is not the upgrade of angular 1. Angular 2 is completely rewritten.  
      Angular 2 is using Typescript which is super set of javascript.  
      Angular 1.x was not built with mobile support in mind, where Angular 2 is mobile oriented.  
@@ -65,7 +65,7 @@ At this level an interviewer wants to know whether the interviewee is a coachabl
      Two-way data binding: ng-model replaced with [(ngModel)]  
      Angular 2 is using Hierarchical Dependency Injection system which is major performance booster. Angular 2 implements unidirectional tree based change detection which again increases performance . As per ng-conf meetup, angular 2 is 5 times faster as compared to angular.  
      In Angular 2, Structural directives syntax is changed. ng-repeat is replaced with *ngFor.  
-2. What is a component? Why would you use it?  
+2. **What is a component? Why would you use it?**  
 **Ans:** We create “components” – which roughly means UI directives.  
 Components have isolated scopes by default.  
 They automatically use controllerAs syntax.  
