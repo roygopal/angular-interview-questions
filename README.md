@@ -55,8 +55,51 @@ At this level an interviewer wants to know whether the interviewee is a coachabl
 
 
 ### Familiarity of Basic Terminology
-1. What are the differences between AngularJS (angular 1.x) and Angular (Angular 2.x and beyond)?
-2. What is a component? Why would you use it? 
+1. What are the differences between AngularJS (angular 1.x) and Angular (Angular 2.x and beyond)?  
+**Ans:** Angular 2 is not the upgrade of angular 1. Angular 2 is completely rewritten.  
+     Angular 2 is using Typescript which is super set of javascript.  
+     Angular 1.x was not built with mobile support in mind, where Angular 2 is mobile oriented.  
+     Angular 1 core concept was $scope, and you will not find $scope in angular 2.0. Angular 2 is using zone.js to detect changes.  
+     Angular 1.x controllers are gone. We can say that controllers are replaced with “Components” in Angular 2.  
+     In Angular 2, local variables are defined using hash(#) prefix.  
+     Two-way data binding: ng-model replaced with [(ngModel)]  
+     Angular 2 is using Hierarchical Dependency Injection system which is major performance booster. Angular 2 implements unidirectional tree based change detection which again increases performance . As per ng-conf meetup, angular 2 is 5 times faster as compared to angular.  
+     In Angular 2, Structural directives syntax is changed. ng-repeat is replaced with *ngFor.  
+2. What is a component? Why would you use it?  
+**Ans:** We create “components” – which roughly means UI directives.  
+Components have isolated scopes by default.  
+They automatically use controllerAs syntax.  
+They use controllers instead of link functions.  
+The bindToController option is on by default.  
+Here’s an example component directive:  
+```
+app.directive('list', function() {
+  return {
+    scope: {
+      items: '='
+    },
+    templateUrl: 'list.html',
+    controller: function ListCtrl() {},
+    controllerAs: '$ctrl',
+    bindToController: true
+  }
+});
+```
+It’s a simple component directive, with an isolated scope, binding, and a controller.  
+
+Here’s how you’ll write it with .component:  
+```
+app.component('list', {
+  bindings: {
+    items: '='
+  },
+  templateUrl: 'list.html',
+  controller: function ListCtrl() {}
+});
+``` 
+Not recommended: If you want a template-less directive, e.g. ng-click that doesn’t have a template or separate scope.  
+For more Info: http://www.codelord.net/2015/12/17/angulars-component-what-is-it-good-for/  
+
 3. What is the minimum definition of a component?
 4. What is a module, and what does it contain?
 5. What is a service, and when will you use it?
