@@ -105,7 +105,12 @@ For more Info: http://www.codelord.net/2015/12/17/angulars-component-what-is-it-
 5. What is a service, and when will you use it?
 6. What is a promise? Explain it laymen's terms.
 7. What are the lifecycle hooks for components and directives?
-8. What are pipes? Give me an example.
+8. What are pipes? Give me an example.  
+**Ans:** A one-way communication channel used for inter-process communication.  
+         Vertical bar, sometimes called pipe , the ASCII character |  
+You can connect two commands together so that the output from one program becomes the input to the next program. Two or more commands connected in this way form a pipe.  
+In UNIX operating systems, a pipe is a technique for passing information from one program process to another.  
+{{expression | decimal | currency}}  
 9. What are the differences between reactive forms and template driven forms?
 10. What is a dumb, or presentation, component? What are the benefits of using dumb components?
 
